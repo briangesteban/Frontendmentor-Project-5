@@ -1,6 +1,7 @@
 :root {
     --clr-neutral-100: hsl(0, 0%, 98%);
     --clr-neutral-200: hsl(0, 0%, 41%);
+    --clr-neutral-200-h: hsl(0, 0%, 56%);
     --clr-neutral-300: hsl(0, 0%, 8%);
 
     --ff-primary: Epilogue, sans-serif;
@@ -29,6 +30,15 @@ header {
     padding: 1rem 1rem 0.5rem 1rem;
 }
 
+main {
+    min-height: 100vh;
+}
+
+footer {
+    background-color: var(--clr-neutral-300);
+    color: var(--clr-neutral-100);
+}
+
 p {
     line-height: 1.5;
 }
@@ -50,13 +60,17 @@ p {
     align-items: center;
 }
 
+.y-center {
+    justify-content: center;
+}
+
 .txt-center {
     text-align: center;
 }
 
 
 /* Unique Classes */
-.hero-image *{
+.hero-image * {
     display: block;
     width: 100vw;
 }
@@ -67,8 +81,7 @@ div.hero-image {
 
 .details {
     row-gap: 1rem;
-    margin: 1rem;
-    padding: 1rem 0;
+    margin: 2rem 1rem;
 }
 
 .details > :nth-child(3) {
@@ -79,16 +92,22 @@ div.hero-image {
     color: var(--clr-neutral-200);
 }
 
-.cta-learn *{
+.details strong {
+    font-weight: var(--fw-medium);
+}
+
+.cta-learn a:is(:link, :visited){
     display: block;
     background-color: var(--clr-neutral-300);
     color: var(--clr-neutral-100);
+    text-decoration: none;
     padding: 1rem;
+    border: 0.1rem solid var(--clr-neutral-300);
     border-radius: 1rem;
 }
-
-.cta-learn a {
-    text-decoration: none;
+.cta-learn a:is(:hover, :active, :focus){
+    background-color: transparent;
+    color: var(--clr-neutral-300);
 }
 
 .partners {
@@ -102,4 +121,20 @@ div.hero-image {
 .partners img {
     height: 1rem;
     width: auto;
+}
+
+.attribution {
+    padding: 0.2rem;
+}
+
+.attribution p {
+    font-size: 0.688rem;
+}
+
+.attribution a:is(:link, :visited) {
+    color: var(--clr-neutral-200);
+}
+
+.attribution a:is(:hover, :active, :focus) {
+    color: var(--clr-neutral-200-h);
 }
