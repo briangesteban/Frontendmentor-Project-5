@@ -26,15 +26,16 @@ body {
 }
 
 header {
-    padding: 1rem;
+    padding: 1rem 1rem 0.5rem 1rem;
 }
 
+p {
+    line-height: 1.5;
+}
+
+/* Repeating Classes */
 .flex {
     display: flex;
-}
-
-.grid {
-    display: grid;
 }
 
 .col-wrap {
@@ -46,9 +47,15 @@ header {
 }
 
 .x-center {
-    justify-content: center;
+    align-items: center;
 }
 
+.txt-center {
+    text-align: center;
+}
+
+
+/* Unique Classes */
 .hero-image *{
     display: block;
     width: 100vw;
@@ -58,19 +65,41 @@ div.hero-image {
     margin: 1rem 0;
 }
 
-.txt-center {
-    text-align: center;
+.details {
+    row-gap: 1rem;
+    margin: 1rem;
+    padding: 1rem 0;
+}
+
+.details > :nth-child(3) {
+    margin: 2rem auto;
+}
+
+.details p {
+    color: var(--clr-neutral-200);
+}
+
+.cta-learn *{
+    display: block;
+    background-color: var(--clr-neutral-300);
+    color: var(--clr-neutral-100);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.cta-learn a {
+    text-decoration: none;
 }
 
 .partners {
-    column-gap: 0.5rem;
+    column-gap: 0.2rem;
 }
 
 .partners > div {
-    padding: 0.5rem 0.2rem;
+    padding: 0.5rem;
 }
 
 .partners img {
-    height: 1.2rem;
+    height: 1rem;
     width: auto;
 }
