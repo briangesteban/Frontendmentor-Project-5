@@ -25,14 +25,36 @@
 
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
   </head>
-  <body>
+  <body class="flex col-nowrap">
     <header>
-      <div>
-        <a href="#Home" aria-label="Snap Logo: Go to Home">
-          <img src="./images/logo.svg" alt="Snap Logo" />
-        </a>
+      <div class="flex row-wrap h-con">
+        <div>
+          <a href="#Home" aria-label="Snap Logo: Go to Home">
+            <img src="./images/logo.svg" alt="Snap Logo" />
+          </a>
+        </div>
+        <div class="menu-button">
+          <button onclick="" aria-label="Open Menu">
+            <img src="./images/icon-menu.svg" alt="Open Menu Button" />
+          </button>
+        </div>
       </div>
     </header>
+    <aside>
+      <nav class="side-menu" aria-label="Sidebar Navigation Menu">
+        <div class="menu-button-close clearfix">
+          <button onclick="" aria-label="Close Menu">
+            <img src="./images/icon-close-menu.svg" alt="Close Menu Button" />
+          </button>
+        </div>
+        <ul>
+          <li>Features</li>
+          <li>Company</li>
+          <li>Careers</li>
+          <li>About</li>
+        </ul>
+      </nav>
+    </aside>
     <main>
       <div class="flex col-wrap x-center">
         <div class="hero-image">

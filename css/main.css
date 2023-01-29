@@ -3,6 +3,7 @@
     --clr-neutral-200: hsl(0, 0%, 41%);
     --clr-neutral-200-h: hsl(0, 0%, 56%);
     --clr-neutral-300: hsl(0, 0%, 8%);
+    --clr-neutral-300-a: hsla(0, 0%, 0%, 0.8);
 
     --ff-primary: Epilogue, sans-serif;
     --fw-medium: 500;
@@ -24,17 +25,15 @@ body {
     font: 1.125rem var(--ff-primary);
     font-weight: var(--fw-medium);
     min-height: 100vh;
+    position: relative;
 }
 
 header {
     padding: 1rem 1rem 0.5rem 1rem;
 }
 
-main {
-    min-height: 100vh;
-}
-
 footer {
+    margin-top: auto;
     background-color: var(--clr-neutral-300);
     color: var(--clr-neutral-100);
 }
@@ -43,6 +42,7 @@ p {
     line-height: 1.5;
 }
 
+
 /* Repeating Classes */
 .flex {
     display: flex;
@@ -50,6 +50,10 @@ p {
 
 .col-wrap {
     flex-flow: column wrap;
+}
+
+.col-nowrap {
+    flex-flow: column nowrap;
 }
 
 .row-wrap {
@@ -68,8 +72,32 @@ p {
     text-align: center;
 }
 
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
 
 /* Unique Classes */
+.h-con {
+    width: 100%;
+}
+
+.h-con > div {
+    width: auto;
+    height: 2rem;
+}
+
+.h-con > :last-child {
+    margin-left: auto;
+}
+
+.menu-button button{
+    background-color: transparent;
+    border: none;
+}
+
 .hero-image * {
     display: block;
     width: 100vw;
@@ -137,4 +165,41 @@ div.hero-image {
 
 .attribution a:is(:hover, :active, :focus) {
     color: var(--clr-neutral-200-h);
+}
+
+
+/* Side Bar Navigation */
+aside {
+    background-color: var(--clr-neutral-300-a);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 999;
+}
+
+div.menu-button-close {
+    margin: 0 1rem;
+}
+
+.menu-button-close button{
+    background-color: transparent;
+    border: none;
+    float: right;
+}
+
+nav {
+    background-color: var(--clr-neutral-100);
+    width: 65%;
+    height: inherit;
+    padding: 1rem 0;
+    float: right;
+}
+
+.side-menu ul {
+    list-style-type: none;
+}
+
+.side-menu ul > li {
+    color: var(--clr-neutral-200);
+    padding: 1rem;
 }
