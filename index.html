@@ -34,32 +34,34 @@
       </div>
     </header>
     <main>
-      <div>
-        <picture>
-          <source
-            media="(max-widht: 1440px)"
-            srcset="./images/image-hero-desktop"
-          />
-          <img
-            src="./images/image-hero-mobile.png"
-            alt="Man holding a laptop on an abstract illustrations"
-          />
-        </picture>
-      </div>
-      <div>
-        <div><h1>Make remote work</h1></div>
-        <div>
-          <p>
-            Get your team in sync, no matter your location. Streamline
-            processes, create team rituals, and watch productivity soar.
-          </p>
+      <div class="flex col-wrap x-center">
+        <div class="hero-image">
+          <picture>
+            <source
+              media="(max-widht: 1440px)"
+              srcset="./images/image-hero-desktop"
+            />
+            <img
+              src="./images/image-hero-mobile.png"
+              alt="Man holding a laptop on an abstract illustrations"
+            />
+          </picture>
         </div>
-        <div><a href="#LearnMore">Learn more</a></div>
-        <div>
-          <div><img src="./images/client-databiz.svg" /></div>
-          <div><img src="./images/client-audiophile.svg" /></div>
-          <div><img src="./images/client-meet.svg" /></div>
-          <div><img src="./images/client-maker.svg" /></div>
+        <div class="flex col-wrap txt-center">
+          <div><h1>Make remote work</h1></div>
+          <div>
+            <p>
+              Get your team in sync, no matter your location. Streamline
+              processes, create team rituals, and watch productivity soar.
+            </p>
+          </div>
+          <div><a href="#LearnMore">Learn more</a></div>
+          <div class="flex row-wrap partners x-center">
+            <div><img src="./images/client-databiz.svg" /></div>
+            <div><img src="./images/client-audiophile.svg" /></div>
+            <div><img src="./images/client-meet.svg" /></div>
+            <div><img src="./images/client-maker.svg" /></div>
+          </div>
         </div>
       </div>
     </main>
