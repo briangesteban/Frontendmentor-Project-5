@@ -23,6 +23,9 @@
     <!-- Links Stylesheet -->
     <link rel="stylesheet" type="text/css" href="./css/main.css" />
 
+    <!-- Links Scripts -->
+    <script async type="text/javascript" src="./scripts/menu.js"></script>
+
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
   </head>
   <body class="flex col-nowrap">
@@ -34,16 +37,16 @@
           </a>
         </div>
         <div class="menu-button">
-          <button onclick="" aria-label="Open Menu">
+          <button id="btn-open-menu" aria-label="Open Menu">
             <img src="./images/icon-menu.svg" alt="Open Menu Button" />
           </button>
         </div>
       </div>
     </header>
-    <aside>
+    <div id="side-menu-container">
       <nav class="side-menu" aria-label="Sidebar Navigation Menu">
         <div class="menu-button-close clearfix">
-          <button onclick="" aria-label="Close Menu">
+          <button id="btn-close-menu" aria-label="Close Menu">
             <img src="./images/icon-close-menu.svg" alt="Close Menu Button" />
           </button>
         </div>
@@ -54,7 +57,7 @@
           <li>About</li>
         </ul>
       </nav>
-    </aside>
+    </div>
     <main>
       <div class="flex col-wrap x-center">
         <div class="hero-image">
