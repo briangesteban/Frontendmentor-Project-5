@@ -4,6 +4,7 @@
     --clr-neutral-200-h: hsl(0, 0%, 56%);
     --clr-neutral-300: hsl(0, 0%, 8%);
     --clr-neutral-300-a: hsla(0, 0%, 0%, 0.8);
+    --clr-transparent: hsla(0, 0%, 0%, 0);
 
     --ff-primary: Epilogue, sans-serif;
     --fw-medium: 500;
@@ -21,6 +22,10 @@
 
 button {
     font: inherit;
+}
+
+button, a { 
+    cursor: pointer;
 }
 
 body {
@@ -179,6 +184,8 @@ div.hero-image {
     width: 100%;
     height: 100%;
     position: absolute;
+    top: 0;
+    left: 0;
     z-index: 999;
 }
 
@@ -206,7 +213,6 @@ nav {
 
 .side-menu li {
     color: var(--clr-neutral-200);
-
 }
 
 .side-menu li a:is(:link, :visited) {
@@ -233,4 +239,101 @@ nav {
 .side-menu li button:is(:hover, :active, :focus) {
     background-color: var(--clr-neutral-300);
     color: var(--clr-neutral-100);
+}
+
+li.side-menu-account {
+    width: 90%;
+    margin: 0.2rem auto;
+}
+
+.side-menu-account a{
+    font-size: 1rem;
+    text-align: center;
+    border: 0.1rem solid var(--clr-neutral-300);
+    border-radius: 1rem;
+    padding: 0.8rem !important;
+}
+
+.login a{
+    border-color: transparent !important;
+}
+
+
+/* Features Dropdown */
+#dd-features li {
+    text-indent: 1rem;
+}
+
+#dd-features li #todo::before {
+    display: inline-block;
+    content: "";
+    background: url("../images/icon-todo.svg") no-repeat;
+    background-size: contain;
+    width: 1rem;
+    height: 1rem;
+    margin-right: 1rem;
+    vertical-align: middle;
+}
+
+#dd-features li a::before {
+    display: inline-block;
+    content: "";
+    background-size: contain;
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+#dd-features li #i-todo::before {
+    background: url("../images/icon-todo.svg") no-repeat;
+}
+
+#dd-features li #i-calendar::before {
+    background: url("../images/icon-calendar.svg") no-repeat;
+}
+
+#dd-features li #i-reminders::before {
+    background: url("../images/icon-reminders.svg") no-repeat;
+}
+
+
+#dd-features li #i-planning::before {
+    background: url("../images/icon-planning.svg") no-repeat;
+}
+
+#dd-features {
+    display: none;
+}
+
+#btn-features::after {
+    display: inline-block;
+    content: "";
+    background: url("../images/icon-arrow-down.svg") no-repeat;
+    background-size: contain;
+    width: 0.8rem;
+    height: 0.8rem;
+    margin-left: 1rem;
+    vertical-align: bottom;
+}
+
+
+/* Company Dropdown */
+#dd-company li {
+    text-indent: 1rem;
+}
+
+#dd-company {
+    display: none;
+}
+
+#btn-company::after {
+    display: inline-block;
+    content: "";
+    background: url("../images/icon-arrow-down.svg") no-repeat;
+    background-size: contain;
+    width: 0.8rem;
+    height: 0.8rem;
+    margin-left: 1rem;
+    vertical-align: bottom;
 }
