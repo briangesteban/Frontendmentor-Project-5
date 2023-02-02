@@ -317,6 +317,10 @@ li.side-menu-account {
     vertical-align: bottom;
 }
 
+.btn-features::after {
+    background: url("../images/icon-arrow-up.svg") no-repeat;
+}
+
 
 /* Company Dropdown */
 #dd-company li {
